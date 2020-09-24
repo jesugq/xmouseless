@@ -24,6 +24,11 @@ static MoveBinding move_bindings[] = {
     { XK_l,         1,     0 },
     { XK_i,         0,    -1 },
     { XK_k,         0,     1 },
+
+    { XK_KP_Left,  -1, 	    0 },
+    { XK_KP_Right,	1,     	0 },
+    { XK_KP_Up, 	0,     -1 },
+    { XK_KP_Begin,	0,     	1 },
 };
 
 /* 1: left
@@ -35,6 +40,10 @@ static ClickBinding click_bindings[] = {
     { XK_f,        1 },
     { XK_d,        2 },
     { XK_s,        3 },
+
+    { XK_KP_Home,	    1 },
+    { XK_KP_End,  	    2 },
+    { XK_KP_Page_Up,    3 },
 };
 
 /* scrolls up, down, left and right
@@ -47,6 +56,11 @@ static ScrollBinding scroll_bindings[] = {
     { XK_minus,    0 ,   -80 },
     { XK_h,        25,    0  },
     { XK_g,       -25,    0  },
+
+    { XK_KP_Multiply,  	0,    	25 },
+    { XK_KP_Divide,	    0,     -25 },
+    { XK_KP_Page_Down,  25,   	0  },
+    { XK_KP_Down,      -25,    	0  },
 };
 
 /* executes shell commands */
@@ -58,5 +72,5 @@ static ShellBinding shell_bindings[] = {
 
 /* exits on key release which allows click and exit with one key */
 static KeySym exit_keys[] = {
-    XK_Escape, XK_q, XK_space
+    XK_Escape, XK_q, XK_space, XK_KP_Insert
 };
