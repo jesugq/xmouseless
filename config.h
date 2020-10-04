@@ -1,30 +1,23 @@
 
 /* the rate at which the mouse moves in Hz
  * does not change its speed */
-static const unsigned int move_rate = 50;
+static const unsigned int move_rate = 60;
 
 /* the default speed of the mouse pointer
  * in pixels per second */
-static const unsigned int default_speed = 500;
+static const unsigned int default_speed = 400;
 
 /* changes the speed of the mouse pointer */
 static SpeedBinding speed_bindings[] = {
-    /* key             speed */  
-    { XK_Super_L,      3000 },
-    { XK_Alt_L,        1500 },
-    { XK_a,            100  },
-    { XK_Control_L,    10   },
+    /* key              speed */  
+    { XK_KP_Add,        4000 },
+    { XK_KP_Subtract,   100  },
 };
 
 /* moves the mouse pointer
  * you can also add any other direction (e.g. diagonals) */
 static MoveBinding move_bindings[] = {
     /* key         x      y */
-    { XK_j,        -1,     0 },
-    { XK_l,         1,     0 },
-    { XK_i,         0,    -1 },
-    { XK_k,         0,     1 },
-
     { XK_KP_Left,  -1, 	    0 },
     { XK_KP_Right,	1,     	0 },
     { XK_KP_Up, 	0,     -1 },
@@ -36,11 +29,6 @@ static MoveBinding move_bindings[] = {
  * 3: right */
 static ClickBinding click_bindings[] = {
     /* key         button */  
-    { XK_space,    1 },
-    { XK_f,        1 },
-    { XK_d,        2 },
-    { XK_s,        3 },
-
     { XK_KP_Home,	    1 },
     { XK_KP_End,  	    2 },
     { XK_KP_Page_Up,    3 },
@@ -50,13 +38,6 @@ static ClickBinding click_bindings[] = {
  * a higher value scrolls faster */
 static ScrollBinding scroll_bindings[] = {
     /* key        x      y */
-    { XK_n,        0 ,    25 },
-    { XK_p,        0 ,   -25 },
-    { XK_plus,     0 ,    80 },
-    { XK_minus,    0 ,   -80 },
-    { XK_h,        25,    0  },
-    { XK_g,       -25,    0  },
-
     { XK_KP_Multiply,  	0,    	25 },
     { XK_KP_Divide,	    0,     -25 },
     { XK_KP_Page_Down,  25,   	0  },
@@ -66,11 +47,9 @@ static ScrollBinding scroll_bindings[] = {
 /* executes shell commands */
 static ShellBinding shell_bindings[] = {
     /* key         command */  
-    { XK_b,        "wmctrl -a firefox" },
-    { XK_0,        "xdotool mousemove 0 0" },
 };
 
 /* exits on key release which allows click and exit with one key */
 static KeySym exit_keys[] = {
-    XK_Escape, XK_q, XK_space, XK_KP_Insert
+    XK_Escape
 };
