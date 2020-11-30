@@ -221,7 +221,6 @@ void handle_key(KeyCode keycode, Bool is_press) {
         }
     }
 
-    is_valid ? printf("Valid\n") : printf("Not Valid\n");
     if (is_press == 1 && is_valid == -1) {
         close_x(EXIT_SUCCESS);
     }
