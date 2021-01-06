@@ -38,10 +38,10 @@ static ClickBinding click_bindings[] = {
  * a higher value scrolls faster */
 static ScrollBinding scroll_bindings[] = {
     /* key        x      y */
-    { XK_KP_Multiply,  	0,    	25 },
-    { XK_KP_Divide,	    0,     -25 },
-    { XK_KP_Page_Down,  25,   	0  },
-    { XK_KP_Down,      -25,    	0  },
+    { XK_KP_Multiply,  	0,    	60 },
+    { XK_KP_Divide,	    0,     -60 },
+    { XK_KP_Page_Down,  60,   	0  },
+    { XK_KP_Down,      -60,    	0  },
 };
 
 /* executes shell commands */
